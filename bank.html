@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/bank.css">
 </head>
+
 <body>
-    <h1 class="text-6xl text-center my-4 bold text-green-950">Let's Money <span class="text-pink-700">Calculation</span></h1>
-    <main>
-        <section class="mt-12 w-3/4 mx-auto">
+    <h1 class="text-6xl text-center my-4 bold text-green-950">Let's Money <span class="text-pink-700">Calculation</span>
+    </h1>
+    <main class="mt-12 w-3/4 mx-auto">
+        <section>
             <div class="grid grid-cols-3 gap-4 text-white">
                 <div class="bg-lime-400 p-12 rounded-lg">
                     <h2 class="text-2xl">Deposit</h2>
-                    <h4 class="text-6xl">$00</h4>
+                    <h4 class="text-6xl">$<span id="deposit_amount">00</span> </h4>
                 </div>
                 <div class="bg-yellow-400 p-12 rounded-lg">
                     <h2 class="text-2xl">Withdrow</h2>
-                    <h4 class="text-6xl">$00</h4>
+                    <h4 class="text-6xl">$<span id="Withdrow_amount">00</span></h4>
                 </div>
                 <div class="bg-emerald-400 p-12 rounded-lg">
                     <h2 class="text-2xl">Balance</h2>
-                    <h4 class="text-6xl">$1200</h4>
+                    <h4 class="text-6xl">$<span id="total_amount">1200</span></h4>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid grid-cols-2 gap-4  mt-12">
+                <div class="bg-green-400 p-12 rounded-lg">
+                    <h2 class="text-2xl mb-2">Please Deposit</h2>
+                    <input title="$ Enter Your Deposit Amount" class="block w-1/2 p-2 " type="number" name=""
+                        id="deposit_field" placeholder=" $ Enter Amount">
+                    <button id="deposit_btn" class="button-36 mt-5" role="button">Deposit</button>
+                </div>
+                <div class="bg-blue-400 p-12 rounded-lg">
+                    <h2 class="text-2xl mb-2"> Please Withdrow</h2>
+                    <input title="$ Enter Your Withdrow Amount" class="block w-1/2 p-2 " type="number" name="" id="Withdrow_field"
+                        placeholder=" $ Enter Amount ">
+                    <button id="Withdrow_btn" class="button-36 mt-5" role="button">Withdrow</button>
                 </div>
             </div>
         </section>
     </main>
+    <script src="js/bank.js"></script>
+    <script src="js/withdraw.js"></script>
+    <script src="js/deposit.js"></script>
 </body>
+
 </html>
